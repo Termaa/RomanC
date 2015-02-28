@@ -1,7 +1,7 @@
 #include "Decode.h"
 
-int roman_decode(char* in) {
-	switch (in[0])
+int char_value(char in) {
+  switch (in)
 	{
 		case 'I' : 
 			return 1;
@@ -18,5 +18,16 @@ int roman_decode(char* in) {
 		case 'M' : 
 			return 1000;
 	}
-	
+}
+
+int roman_decode(char* in){
+  if (in[1] != '\0') {
+    if(char_value(in[0]) >= char_value(in[1]))
+      return char_value(in[0]) + char_value(in[1]);
+    else
+      return char_value(in[1]) - char_value(in[0]);
+  }
+  else {
+    return char_value(in[0]);
+  }
 }

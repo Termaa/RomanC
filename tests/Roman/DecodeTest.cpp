@@ -46,14 +46,29 @@ TEST(Roman, Decode_D)
   CHECK_EQUAL(500, roman_decode("D"));
 }
 
-TEST(Roman, Decode_CCCLXIX)
-{
-  CHECK_EQUAL(369, roman_decode("MCCCLXIX"));
-}
-
 TEST(Roman, Decode_M)
 {
   CHECK_EQUAL(1000, roman_decode("M"));
+}
+
+TEST(Roman, Decode_II)
+{
+  CHECK_EQUAL(2, roman_decode("II"));
+}
+
+TEST(Roman, Decode_IV)
+{
+  CHECK_EQUAL(4, roman_decode("IV"));
+}
+
+TEST(Roman, Decode_VI)
+{
+  CHECK_EQUAL(6, roman_decode("VI"));
+}
+
+TEST(Roman, Decode_CCCLXIX)
+{
+  CHECK_EQUAL(369, roman_decode("MCCCLXIX"));
 }
 
 
