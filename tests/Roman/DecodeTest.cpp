@@ -66,9 +66,39 @@ TEST(Roman, Decode_VI)
   CHECK_EQUAL(6, roman_decode("VI"));
 }
 
+TEST(Roman, Decode_III)
+{
+  CHECK_EQUAL(3, roman_decode("III"));
+}
+
+TEST(Roman, Decode_VII)
+{
+  CHECK_EQUAL(7, roman_decode("VII"));
+}
+
+TEST(Roman, Decode_XXX)
+{
+  CHECK_EQUAL(30, roman_decode("XXX"));
+}
+
+TEST(Roman, Decode_XIV)
+{
+  CHECK_EQUAL(14, roman_decode("XIV"));
+}
+
+TEST(Roman, Decode_CCX)
+{
+  CHECK_EQUAL(210, roman_decode("CCX"));
+}
+
 TEST(Roman, Decode_CCCLXIX)
 {
-  CHECK_EQUAL(369, roman_decode("MCCCLXIX"));
+  CHECK_EQUAL(369, roman_decode("CCCLXIX"));
+}
+
+TEST(Roman, Decode_MMDCCLI)
+{
+  CHECK_EQUAL(2751, roman_decode("MMDCCLI"));
 }
 
 
